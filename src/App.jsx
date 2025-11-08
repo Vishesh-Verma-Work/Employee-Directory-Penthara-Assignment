@@ -4,6 +4,7 @@ function App() {
 
   return (
     <div className="app">
+      <div className="heading">By Vishesh Verma</div>
       <HomePage />
     </div>
   )
