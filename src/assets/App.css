@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(120deg, lightblue, white);
+  color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main-container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 260px;
+}
+
+.list-section {
+  flex: 2;
+  width: 100%;
+  overflow: visible;
+}
+
+h1 {
+  text-align: center;
+  color: darkblue;
+  margin-bottom: 14px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: white;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: royalblue;
+  box-shadow: 0 0 6px rgba(65, 105, 225, 0.3);
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+button.primary {
+  background: royalblue;
+  color: white;
+}
+
+button.primary:hover {
+  background: mediumblue;
+}
+
+button.ghost {
+  background: transparent;
+  color: royalblue;
+  border: 1px solid royalblue;
+}
+
+.reset-btn {
+  background: crimson;
+  color: white;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.reset-btn:hover {
+  background: firebrick;
+}
+
+.employee-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gainsboro;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: white;
+  transition: box-shadow 0.2s ease;
+}
+
+.employee-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.employee-details h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: black;
+}
+
+.employee-details p {
+  margin: 2px 0;
+  color: dimgray;
+  font-size: 13px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 30, 0.45);
+  z-index: 999;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.modal-card {
+  width: 95%;
+  max-width: 520px;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 12px 40px rgba(10, 10, 30, 0.25);
+}
+
+@media (max-width: 820px) {
+  .main-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    width: 94%;
+    margin-top: 10px;
+  }
+
+  .form-section {
+    width: 100%;
+    order: 1;
+  }
+
+  .list-section {
+    width: 100%;
+    order: 2;
+    margin-top: 14px;
+  }
+
+  .employee-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
